@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'edu.sc.seis.launch4j' version '4.0.0'
 }
 
 repositories {
@@ -23,4 +24,8 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperty "file.encoding", "UTF-8"
+}
+
+launch4j {
+    mainClassName = 'SwingDemo'
 }
